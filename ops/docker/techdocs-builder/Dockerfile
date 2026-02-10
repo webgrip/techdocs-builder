@@ -7,7 +7,7 @@ RUN npm install -g \
     @mermaid-js/mermaid-cli@11.4.2
 
 
-FROM python:3.13.2-alpine3.20 AS python
+FROM python:3.13.3-alpine3.20 AS python
 
 RUN apk add --no-cache graphviz
 
@@ -29,7 +29,7 @@ RUN curl -o /opt/plantuml.jar -L http://sourceforge.net/projects/plantuml/files/
     chmod +x /usr/local/bin/plantuml
 
 
-FROM alpine:3.20 AS final
+FROM alpine:3.23 AS final
 
 RUN apk add --no-cache \
     libstdc++ \
