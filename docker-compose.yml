@@ -10,7 +10,7 @@ services:
 
   builder-mkdocs-runner:
     container_name: builder-mkdocs-runner
-    image: webgrip/mkdocs-runner:latest
+    image: webgrip/mkdocs-runner:latest@sha256:86c382e885a4c71837bebe7b56a8ce779415cc21ab4b1c4c931d4ff891106af8
     pull_policy: always
     depends_on:
       techdocs-builder-builder:
@@ -22,7 +22,7 @@ services:
 
   builder-techdocs-runner:
     container_name: techdocs-builder-techdocs
-    image: webgrip/techdocs-runner:latest
+    image: webgrip/techdocs-runner:latest@sha256:715d423dd6a563fbdc3f97298dde8d96374f3e22bafc08966f623e2445bdb7cf
     pull_policy: always
     depends_on:
       techdocs-builder-builder:
