@@ -1,4 +1,4 @@
-FROM node:23-alpine3.20 AS node
+FROM node:24-alpine3.20 AS node
 
 RUN corepack enable && corepack prepare npm@latest --activate
 
