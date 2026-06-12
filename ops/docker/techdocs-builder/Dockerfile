@@ -29,7 +29,7 @@ RUN curl -o /opt/plantuml.jar -L http://sourceforge.net/projects/plantuml/files/
     chmod +x /usr/local/bin/plantuml
 
 
-FROM alpine:3.20 AS final
+FROM alpine:3.24 AS final
 
 RUN apk add --no-cache \
     libstdc++ \
